@@ -153,12 +153,12 @@ export default {
         { src: 'certi.jpg', alt: 'Image 3' }
       ],
       topUsersData : [
-      { userName: "rosaa01xx", amount: "150,000", timestamp: "31 ส.ค. 2568" },
-      { userName: "rosab89xx", amount: "130,500", timestamp: "31 ส.ค. 2568" },
-      { userName: "rosae11xx", amount: "95,200", timestamp: "31 ส.ค. 2568" },
-      { userName: "rosad04xx", amount: "83,000", timestamp: "31 ส.ค. 2568" },
-      { userName: "rosae87xx", amount: "82,000", timestamp: "31 ส.ค. 2568" },
-      { userName: "rosae35xx", amount: "78,000", timestamp: "31 ส.ค. 2568" },
+      { userName: "rosaa01xx", amount: "150,000", timestamp: "01 ก.ย. 2568" },
+      { userName: "rosab89xx", amount: "130,500", timestamp: "01 ก.ย. 2568" },
+      { userName: "rosae11xx", amount: "95,200", timestamp: "01 ก.ย. 2568" },
+      { userName: "rosad04xx", amount: "83,000", timestamp: "01 ก.ย. 2568" },
+      { userName: "rosae87xx", amount: "82,000", timestamp: "01 ก.ย. 2568" },
+      { userName: "rosae35xx", amount: "78,000", timestamp: "01 ก.ย. 2568" },
     ],
     reviews : [
       { user: "rosaj23xx", text: "เว็บนี้ใช้งานง่าย ถอนเงินไวมาก", img: "photo-2568-06-02-13-24-49.jpg" },
