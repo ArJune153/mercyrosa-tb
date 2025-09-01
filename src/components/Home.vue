@@ -6,11 +6,11 @@
       <br><b class="text2">✨การันตีผู้ใช้งานจริงนับล้านยูสเซอร์ ลูกค้าใหม่ เพิ่มอัตราการชนะ ทันที !!</b>
     </div>
     <div class="button-container">
-    <a href="https://lin.ee/diAUjCI" class="custom-button1">
+    <a href="https://lin.ee/diAUjCI" class="custom-button1" onclick="fbq('track', 'Subscribe', {value: 299.00, currency: 'THB'});">
         <i class="fas fa-user-plus"></i>  <!-- ไอคอนสมัครสมาชิก -->
         สมัครสมาชิก
     </a>
-    <a href="https://lin.ee/diAUjCI" class="custom-button2">
+    <a href="https://lin.ee/diAUjCI" class="custom-button2" onclick="fbq('track', 'Subscribe', {value: 299.00, currency: 'THB'});">
         <i class="fas fa-comments"></i>  <!-- ไอคอนติดต่อแอดมิน -->
         ติดต่อแอดมิน
     </a>
