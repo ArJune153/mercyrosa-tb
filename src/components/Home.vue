@@ -21,23 +21,9 @@
     <i class="fas fa-circle online-icon"></i>
     <span class="online-count">ออนไลน์ <span class="online-num" ref="onlineCountAll">{{ onlineCountAll }}</span> คน</span>
   </div>
-</div>
-    <div class="rank-payment">
-        <span class="text3">👑 อันดับแจ็กพอตแตก</span>
-    </div> 
-    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
-      <div class="ranking-container" id="rankingContainer">
-          <!-- การ์ดจะถูกเพิ่มที่นี่โดย JavaScript -->
-      </div>
-    </div>  
-
-    <div class="rank-payment">
-        <span class="text3">🏆 อันดับการถอน</span>
-    </div> 
-    <div class="container2" id="container">
-    <!-- การ์ดจะถูกเพิ่มที่นี่โดย JavaScript -->
   </div>
-        <span class="text4">🔥 เปอร์เซ็นต์เกมแตกสูง</span>
+
+    <span class="text4">🔥เปอร์เซ็นต์เกมแตกสูง</span>
         <div class="card-container">
     <!-- Card 1 -->
     <div class="card">
@@ -106,7 +92,23 @@
         </div>
       </a>
     </div>
-  </div>
+        </div>
+ 
+    <div class="rank-payment">
+        <span class="text3">👑 อันดับแจ็กพอตแตก</span>
+    </div> 
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+      <div class="ranking-container" id="rankingContainer">
+          <!-- การ์ดจะถูกเพิ่มที่นี่โดย JavaScript -->
+      </div>
+    </div>  
+
+    <div class="rank-payment">
+        <span class="text3">🏆 อันดับการถอน</span>
+    </div> 
+    <div class="container2" id="container">
+    <!-- การ์ดจะถูกเพิ่มที่นี่โดย JavaScript -->
+  </div>     
 
    <div class="rank-payment">
         <span class="text3">🥰 รีวิวลูกค้า</span>
@@ -114,8 +116,8 @@
     <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
       <div class="rw-container" id="rw-container"></div>
     </div>
- 
-  <div class="slider-container">
+  
+    <div class="slider-container">
     <div class="slider" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(slide, index) in slides" :key="index" class="slide">
         <img :src="require(`@/assets/${slide.src}`)" :alt="slide.alt" />
@@ -131,6 +133,7 @@
       ></div>
     </div>
   </div>
+
   </div>
 </template>
 
@@ -140,7 +143,7 @@ export default {
   data() {
     return {
       currentIndex: 0,
-      onlineCount1: "9,563",
+      onlineCount1: "33,563",
       onlineCount2: "23,123",
       onlineCount3: "15,900",
       onlineCount4: "18,351",
@@ -148,17 +151,17 @@ export default {
       onlineCount6: "13,254",
       onlineCountAll: "189,631",
       slides: [
+        { src: 'certi.jpg', alt: 'Image 3' },
         { src: 'photo_6228624588875613744_y.jpg', alt: 'Image 1' },
-        { src: 'photo_6228624588875613745_y.jpg', alt: 'Image 2' },
-        { src: 'certi.jpg', alt: 'Image 3' }
+        { src: 'photo_6228624588875613745_y.jpg', alt: 'Image 2' },      
       ],
       topUsersData : [
-      { userName: "rosaa01xx", amount: "150,000", timestamp: "01 ก.ย. 2568" },
-      { userName: "rosab89xx", amount: "130,500", timestamp: "01 ก.ย. 2568" },
-      { userName: "rosae11xx", amount: "95,200", timestamp: "01 ก.ย. 2568" },
-      { userName: "rosad04xx", amount: "83,000", timestamp: "01 ก.ย. 2568" },
-      { userName: "rosae87xx", amount: "82,000", timestamp: "01 ก.ย. 2568" },
-      { userName: "rosae35xx", amount: "78,000", timestamp: "01 ก.ย. 2568" },
+      { userName: "rosaa01xx", amount: "150,000", timestamp: "31 ส.ค. 2568" },
+      { userName: "rosab89xx", amount: "130,500", timestamp: "31 ส.ค. 2568" },
+      { userName: "rosae11xx", amount: "95,200", timestamp: "31 ส.ค. 2568" },
+      { userName: "rosad04xx", amount: "83,000", timestamp: "31 ส.ค. 2568" },
+      { userName: "rosae87xx", amount: "82,000", timestamp: "31 ส.ค. 2568" },
+      { userName: "rosae35xx", amount: "78,000", timestamp: "31 ส.ค. 2568" },
     ],
     reviews : [
       { user: "rosaj23xx", text: "เว็บนี้ใช้งานง่าย ถอนเงินไวมาก", img: "photo-2568-06-02-13-24-49.jpg" },
@@ -183,34 +186,41 @@ export default {
   },
   methods: {
     createRankingCard(user, rank) {
-      const rankingContainer = document.getElementById("rankingContainer");
+        const rankingContainer = document.getElementById("rankingContainer");
 
-      const card = document.createElement("div");
-      card.classList.add("ranking-card");
+        const card = document.createElement("div");
+        card.classList.add("ranking-card");
 
-      const speedClasses = ['fast-wave', 'medium-wave', 'slow-wave'];
-      const selectedSpeedClass = speedClasses[Math.floor(Math.random() * speedClasses.length)];
-      card.classList.add(selectedSpeedClass);
+        const speedClasses = ['fast-wave', 'medium-wave', 'slow-wave'];
+        const selectedSpeedClass = speedClasses[Math.floor(Math.random() * speedClasses.length)];
+        card.classList.add(selectedSpeedClass);
 
-      card.innerHTML = `
-        <div class="card-details">
-          <div class="info-section">
-            <div class="user-name">ยูส: ${user.userName}</div>
-            <div class="user-transaction">ยอดถอน:  <span class="amount">${user.amount} </span></div>
-            <div class="user-transaction">เวลา: ${user.timestamp}</div>
+        // --- สร้างวันที่ปัจจุบันเป็นภาษาไทย พร้อมเลข 0 ข้างหน้า ---
+        const now = new Date();
+        const day = now.getDate().toString().padStart(2, '0'); // ใส่ 0 ถ้าวัน < 10
+        const month = now.toLocaleDateString('th-TH', { month: 'short' });
+        const year = now.getFullYear() + 543; // แปลงเป็น พ.ศ.
+        const thaiDate = `${day} ${month} ${year}`;
+
+        card.innerHTML = `
+          <div class="card-details">
+            <div class="info-section">
+              <div class="user-name">ยูส: ${user.userName}</div>
+              <div class="user-transaction">ยอดถอน: <span class="amount">${user.amount}</span></div>
+              <div class="user-transaction">เวลา: ${thaiDate}</div>
+            </div>
           </div>
-        </div>
-        <div class="rank-info" data-rank="${rank}">
-          <!-- จะแสดงหมายเลขอันดับที่นี่ -->
-        </div>
-      `;
+          <div class="rank-info" data-rank="${rank}">
+            <!-- จะแสดงหมายเลขอันดับที่นี่ -->
+          </div>
+        `;
 
-      rankingContainer.appendChild(card);
+        rankingContainer.appendChild(card);
 
-      if (rankingContainer.children.length > 6) {
-        rankingContainer.removeChild(rankingContainer.firstElementChild);
-      }
-    },
+        if (rankingContainer.children.length > 6) {
+          rankingContainer.removeChild(rankingContainer.firstElementChild);
+        }
+      },
      animateNumber(refName, startValue, endValue, callback) {
       let currentValue = startValue;
       const step = Math.max(1, Math.ceil((endValue - startValue) / 20));
