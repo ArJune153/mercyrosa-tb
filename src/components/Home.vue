@@ -117,22 +117,7 @@
       <div class="rw-container" id="rw-container"></div>
     </div>
   
-    <div class="slider-container">
-    <div class="slider" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div v-for="(slide, index) in slides" :key="index" class="slide">
-        <img :src="require(`@/assets/${slide.src}`)" :alt="slide.alt" />
-      </div>
-    </div>
-    <!-- Golden Dots -->
-    <div class="dots-container">
-      <div
-        v-for="(slide, index) in slides"
-        :key="index"
-        :class="['dot', { active: currentIndex === index }]"
-        @click="goToSlide(index)"
-      ></div>
-    </div>
-  </div>
+    
 
   </div>
 </template>
